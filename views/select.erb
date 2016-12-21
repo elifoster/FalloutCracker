@@ -1,0 +1,16 @@
+<html>
+<head>
+  <title>Fallout Cracker</title>
+</head>
+
+<body>
+<form action="filter" method="post">
+  Enter the number of characters that were correct: <input type="number" name="num"><br />
+  Select the word you entered in the Terminal:<br />
+  <input type="hidden" name="words" value=<%= words.join("|") %>>
+  <% words.each do |word| %>
+    <input type="submit" name="word" value=<%= word %>><br />
+  <% end %>
+</form>
+</body>
+</html>
